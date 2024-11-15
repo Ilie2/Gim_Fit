@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Backend_Gimfit.Data;
 using Backend_Gimfit.Models;
@@ -50,7 +50,7 @@ namespace Backend_Gimfit.Controllers
             try
             {
                 // Verificăm dacă trainerul există înainte de a crea cursul
-                var existingTrainer = await _context.Trainers.FindAsync(courseDTO.Trainer.Id);
+                var existingTrainer = await _context.Trainers.FindAsync(courseDTO.Trainer.ID);
                 if (existingTrainer == null)
                 {
                     return BadRequest("Trainerul specificat nu există.");
@@ -64,7 +64,7 @@ namespace Backend_Gimfit.Controllers
                     Duration = courseDTO.Duration,
                     Capacity = courseDTO.Capacity,
                     SubscriptionId = courseDTO.SubscriptionId,
-                    TrainerId = courseDTO.Trainer.Id // Setăm ID-ul trainerului asociat
+                    TrainerId = courseDTO.Trainer.ID // Setăm ID-ul trainerului asociat
                 };
 
                 // Adăugăm cursul și salvăm modificările în baza de date
@@ -72,7 +72,7 @@ namespace Backend_Gimfit.Controllers
                 await _context.SaveChangesAsync();
 
                 // Returnăm răspunsul de tip CreatedAtAction
-                return CreatedAtAction(nameof(GetCourse), new { id = course.Id }, course);
+                return CreatedAtAction(nameof(GetCourse), new { id = course.ID }, course);
             }
             catch (Exception ex)
             {
@@ -163,4 +163,4 @@ namespace Backend_Gimfit.Controllers
             return _context.Courses.Any(e => e.ID == id);
         }
     }
-}*/
+}

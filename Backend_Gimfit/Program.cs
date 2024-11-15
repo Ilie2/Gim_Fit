@@ -21,6 +21,17 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
 });
 
+// Configurare CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", builder =>
+    {
+        builder.AllowAnyOrigin() // Sau .WithOrigins("http://localhost:3000") pentru o origine specifică
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
 // Adăugare servicii pentru autentificare și autorizare
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
 
@@ -99,6 +110,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.UseCors("AllowAllOrigins"); // Activare CORS aici
 app.UseAuthentication();
 app.UseAuthorization();
 

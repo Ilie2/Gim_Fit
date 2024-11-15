@@ -1,0 +1,139 @@
+/* General Page Styling */
+body {
+    background: url('../Assets/home_gym_bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  
+  .courses-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Header Styling */
+  .courses-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .courses-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .courses-header p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  /* Courses List */
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .course {
+    max-width: 260px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .course h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .course p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  .course button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .course button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add/Edit Course Form */
+  .add-course {
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-course h2 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-course form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-course input,
+  .add-course textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .add-course button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-course button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  .add-course button.cancel-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-course button.cancel-btn:hover {
+    background-color: #c82333;
+  }
+  
